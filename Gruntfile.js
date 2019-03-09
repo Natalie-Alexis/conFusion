@@ -1,18 +1,23 @@
 'use strict';
-
-module.exports = function(grunt) {
-
+module.exports = function (grunt) {
+  // Define the configuration for all the tasks
+  grunt.initConfig({
+  });
+};
+'use strict';
+module.exports = function (grunt) {
+    // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
-
+    // Automatically load required Grunt tasks
     require('jit-grunt')(grunt, {
         useminPrepare: 'grunt-usemin'
-    });
-
+      });
+    // Define the configuration for all the tasks
     grunt.initConfig({
         sass: {
             dist: {
                 files: {
-                    'css/styles.css': 'css/styles.css'
+                    'css/styles.css': 'css/styles.scss'
                 }
             }
         },
@@ -37,7 +42,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-
         copy: {
             html: {
                 files: [
@@ -62,7 +66,6 @@ module.exports = function(grunt) {
                 }]
             }
         },
-
         clean: {
             build: {
                 src: [ 'dist/']
@@ -78,7 +81,6 @@ module.exports = function(grunt) {
                 }]
             }
         },
-
         useminPrepare: {
             foo: {
                 dest: 'dist',
@@ -104,7 +106,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-
         // Concat
         concat: {
             options: {
@@ -114,17 +115,14 @@ module.exports = function(grunt) {
             // dist configuration is provided by useminPrepare
             dist: {}
         },
-
         // Uglify
         uglify: {
             // dist configuration is provided by useminPrepare
             dist: {}
         },
-
         cssmin: {
             dist: {}
         },
-
         // Filerev
         filerev: {
             options: {
@@ -155,7 +153,6 @@ module.exports = function(grunt) {
                 assetsDirs: ['dist', 'dist/css','dist/js']
             }
         },
-
         htmlmin: {                                         // Task
             dist: {                                        // Target
                 options: {                                 // Target options
@@ -168,7 +165,6 @@ module.exports = function(grunt) {
                 }
             }
         }
-
     });
     
     grunt.registerTask('css', ['sass']);

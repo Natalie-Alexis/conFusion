@@ -14,3 +14,10 @@ $(document).ready(function() {
 }
 });
 });
+
+$("#login").click(function(){
+    $("#loginModal").modal('show');
+});
+$("#reservelabel").click(function(){
+    $("#reserveatable").modal('show');
+});

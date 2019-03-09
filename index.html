@@ -34,23 +34,23 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a role="button" id="login">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
+                       
                 </span>
             </div>
         </div>
     </nav>
 
-    <div id="loginModal" class="modal fade" role="dialog">
+    <div id="loginModal" class="modal">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
-                        &times;
-                    </button>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -74,8 +74,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto"
-                                data-dismiss="modal">Cancel</button>
+                            <button type="close" class="btn btn-secondary btn-sm ml-auto" data-dimiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
                         </div>
                     </form>
@@ -84,14 +83,12 @@
         </div>
     </div>
 
-    <div class="modal fade" id="reserveatable" tabindex="-1" role="dialog">
+    <div id="reserveatable" class="modal">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="reserveatablelabel">Reserve a Table</h5>
-                    <button type="button" class="close" data-dismiss="modal">
-                        &times;
-                    </button>
+                    <h5 class="modal-title">Reserve a Table</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group row">
@@ -150,20 +147,19 @@
                             <label class="sr-only" for="time">Time</label>
                             <input type="text" class="col form-control mb-2 mr-sm-2" id="time" placeholder="Time">
                     </div>
-                    <div class="modal-footer"></div>
-                    <div class="form-group row">
-                        <div class="offset-md-2 col-md-10">
+                </div>
+                    
+                    <div class="form-group-row">
+                        <div class="modal-footer">
+                        <div class="offset-md-2">
                             <button type="close" class="btn btn-secondary" data-dimiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary">Reserve</button>
                         </div>
                     </div>
-
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
 
     <header class="jumbotron">
         <div class="container">
@@ -177,8 +173,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-3 mt-5">
-                    <button type="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal"
-                        data-target="#reserveatable">
+                    <button type="button" class="btn btn-warning btn-sm btn-block" id="reservelabel">
                         Reserve Table
                     </button>
                 </div>
@@ -249,6 +244,7 @@
                 </div>
             </div>
         </div>
+        <div class="container">
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
